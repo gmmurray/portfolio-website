@@ -1,0 +1,18 @@
+$scrollbar-width: 10px;
+
+::-webkit-scrollbar {
+  width: $scrollbar-width;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $theme-darker-blue;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $theme-yellow;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $theme-dark-yellow;
+}
