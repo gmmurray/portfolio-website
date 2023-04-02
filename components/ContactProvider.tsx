@@ -116,7 +116,7 @@ export const ContactProvider = ({ children }: PropsWithChildren) => {
                 error={!!formErrors.message}
                 helperText={formErrors.message}
                 variant="standard"
-                label="Message"
+                label="Message*"
                 multiline
                 minRows={3}
               />
