@@ -19,7 +19,7 @@ const AboutSection = ({ content }: Props) => {
           <img
             src={content.imageUrl}
             alt="photo of Greg"
-            style={{ maxHeight: '50vh' }}
+            style={{ maxHeight: '50vh', maxWidth: '100%' }}
           />
         </Grid>
         <Grid item xs={12} md>

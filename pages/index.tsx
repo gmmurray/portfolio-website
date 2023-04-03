@@ -28,7 +28,10 @@ const HomePage = ({
       <SectionContainer id={pageLinks.about.id}>
         <AboutSection content={about} />
       </SectionContainer>
-      <SectionContainer id={pageLinks.experiences.id}>
+      <SectionContainer
+        id={pageLinks.experiences.id}
+        centerHorizontally={false}
+      >
         <ExperiencesSection content={experience} />
       </SectionContainer>
       <SectionContainer id={pageLinks.featured.id} centerHorizontally={false}>
