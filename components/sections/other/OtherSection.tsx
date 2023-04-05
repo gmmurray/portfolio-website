@@ -27,10 +27,30 @@ const OtherSection = ({ content }: Props) => {
                 }}
               >
                 <Box sx={{ mb: 2, p: 2 }}>
-                  <Typography variant="h5" component="h2" gutterBottom>
+                  <Typography
+                    variant="h5"
+                    component="h2"
+                    gutterBottom
+                    sx={{
+                      textAlign: {
+                        xs: 'center',
+                        md: 'left',
+                      },
+                    }}
+                  >
                     {contentItem.title}
                   </Typography>
-                  <Tags items={contentItem.tags} />
+                  <Tags
+                    items={contentItem.tags}
+                    gridProps={{
+                      sx: {
+                        justifyContent: {
+                          xs: 'center',
+                          md: 'left',
+                        },
+                      },
+                    }}
+                  />
                   <MarkdownViewer value={contentItem.content} />
                 </Box>
                 <Box
