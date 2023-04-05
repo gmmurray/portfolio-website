@@ -1,13 +1,14 @@
-import { Chip, Grid } from '@mui/material';
+import { Chip, Grid, GridProps } from '@mui/material';
 
 import React from 'react';
 
 type Props = {
   items: string[];
+  gridProps?: GridProps;
 };
-const Tags = ({ items }: Props) => {
+const Tags = ({ items, gridProps = {} }: Props) => {
   return (
-    <Grid container spacing={1}>
+    <Grid {...gridProps} container spacing={1}>
       {items.map((tag, index) => {
         return (
           <Grid item xs="auto" key={index}>

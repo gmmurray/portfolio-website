@@ -4,12 +4,14 @@ import { getNavbarHeight, getScrollbarWidth } from '../util/windowHelpers';
 
 type Props = {
   first?: boolean;
+  last?: boolean;
   id?: string;
   centerHorizontally?: boolean;
 } & PropsWithChildren;
 const SectionContainer = ({
   id,
   first = false,
+  last = false,
   centerHorizontally = true,
   children,
 }: Props) => {
@@ -36,6 +38,10 @@ const SectionContainer = ({
         minHeight: '100vh',
         width: `calc(100vw - ${scrollbarWidth}px)`,
         maxWidth: `calc(100vw - ${scrollbarWidth}px)`,
+        pb: {
+          xs: 0,
+          lg: last ? 10 : 0,
+        },
         scrollSnapAlign: {
           xs: undefined,
           lg: 'start',

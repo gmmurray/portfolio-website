@@ -6,7 +6,18 @@ type Props = {
 };
 
 const SectionHeader = ({ text }: Props) => {
-  return <Typography variant="h2" component="h1">{`<${text}/>`}</Typography>;
+  return (
+    <Typography
+      variant="h2"
+      component="h1"
+      sx={{
+        textAlign: {
+          xs: 'center',
+          md: 'left',
+        },
+      }}
+    >{`<${text}/>`}</Typography>
+  );
 };
 
 export default SectionHeader;

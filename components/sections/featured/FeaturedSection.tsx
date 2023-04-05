@@ -131,11 +131,39 @@ const FeaturedSection = ({ content }: Props) => {
                   <ArrowForwardIcon />
                 </IconButton>
               </Grid>
-              <Grid item xs={12} lg={6}>
-                <Typography variant="h4" component="h2" gutterBottom>
+              <Grid
+                item
+                xs={12}
+                lg={6}
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+              >
+                <Typography
+                  variant="h4"
+                  component="h2"
+                  gutterBottom
+                  sx={{
+                    textAlign: {
+                      xs: 'center',
+                      md: 'left',
+                    },
+                  }}
+                >
                   {visibleProject.title}
                 </Typography>
-                <Tags items={visibleProject.tags} />
+                <Tags
+                  items={visibleProject.tags}
+                  gridProps={{
+                    sx: {
+                      justifyContent: {
+                        xs: 'center',
+                        md: 'left',
+                      },
+                    },
+                  }}
+                />
                 <Box>
                   <MarkdownViewer value={visibleProject.content} />
                 </Box>

@@ -33,10 +33,29 @@ const AboutSection = ({ content }: Props) => {
             </Typography>
           </Box>
           <Box sx={{ my: 2 }}>
-            <Typography variant="h4" component="h2" gutterBottom>
+            <Typography
+              variant="h4"
+              component="h2"
+              gutterBottom
+              sx={{
+                textAlign: {
+                  xs: 'center',
+                  md: 'left',
+                },
+              }}
+            >
               Technologies
             </Typography>
-            <Grid container spacing={1}>
+            <Grid
+              container
+              spacing={1}
+              sx={{
+                textAlign: {
+                  xs: 'center',
+                  md: 'left',
+                },
+              }}
+            >
               {content.technologies.map((item, key) => {
                 return (
                   <Grid key={key} item xs={6}>

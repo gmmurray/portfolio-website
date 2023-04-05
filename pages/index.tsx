@@ -37,7 +37,7 @@ const HomePage = ({
       <SectionContainer id={pageLinks.featured.id} centerHorizontally={false}>
         <FeaturedSection content={featured} />
       </SectionContainer>
-      <SectionContainer id={pageLinks.other.id}>
+      <SectionContainer id={pageLinks.other.id} last>
         <OtherSection content={other} />
       </SectionContainer>
       <ActionSpeedDial />
