@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { Box, Fade, Grid, IconButton, Typography } from '@mui/material';
+import { Box, Fade, Grid, IconButton, Link, Typography } from '@mui/material';
 import React, { Fragment, useCallback, useState } from 'react';
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -140,19 +140,22 @@ const FeaturedSection = ({ content }: Props) => {
                   flexDirection: 'column',
                 }}
               >
-                <Typography
-                  variant="h4"
-                  component="h2"
-                  gutterBottom
+                <Box
                   sx={{
-                    textAlign: {
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: {
                       xs: 'center',
                       md: 'left',
                     },
                   }}
                 >
-                  {visibleProject.title}
-                </Typography>
+                  <Link href={visibleProject.titleUrl} target="_blank">
+                    <Typography variant="h4" component="h2" gutterBottom>
+                      {visibleProject.title}
+                    </Typography>
+                  </Link>
+                </Box>
                 <Tags
                   items={visibleProject.tags}
                   gridProps={{
