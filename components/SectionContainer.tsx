@@ -42,10 +42,6 @@ const SectionContainer = ({
           xs: 0,
           lg: last ? 10 : 0,
         },
-        scrollSnapAlign: {
-          xs: undefined,
-          lg: 'start',
-        },
       }}
     >
       <Container
