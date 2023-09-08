@@ -24,7 +24,7 @@ const LandingSection = () => {
       }}
     >
       <Box>
-        <Image src="/icon.png" alt="greg logo" height="200" width="200" />
+        <Image src="/favicon.ico" alt="greg logo" height="200" width="200" />
       </Box>
       <Box>
         <Typography variant="h1">Welcome</Typography>

@@ -4,6 +4,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 
 import type { AppProps } from 'next/app';
 import { ContactProvider } from '../components/ContactProvider';
+import { DefaultSeo } from 'next-seo';
 import { Fragment } from 'react';
 import { GoogleAnalytics } from 'nextjs-google-analytics';
 import Head from 'next/head';
@@ -15,12 +16,24 @@ export default function App({ Component, pageProps }: AppProps) {
       {process.env.NODE_ENV !== 'development' && (
         <GoogleAnalytics trackPageViews />
       )}
+      <DefaultSeo
+        title="Greg Murray - Software Engineer"
+        description="Jacksonville, FL based Full-stack Software Engineer with experience in React/NextJS, C#/.NET, MongoDB, and SQL"
+        openGraph={{
+          type: 'website',
+          url: 'https://gregmurray.org',
+          images: [
+            {
+              url: 'https://gregmurray.org/favicon.ico',
+              width: 500,
+              height: 500,
+              alt: 'Greg Murray icon',
+            },
+          ],
+        }}
+      />
       <ThemeProvider theme={getTheme()}>
         <CssBaseline />
-        <Head>
-          <meta name="viewport" content="initial-scale=1, width=device-width" />
-          <title>Greg Murray - Software Engineer</title>
-        </Head>
         <ContactProvider>
           <Component {...pageProps} />
         </ContactProvider>

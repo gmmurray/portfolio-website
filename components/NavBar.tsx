@@ -72,7 +72,7 @@ const NavBar = () => {
               <Link href="/" passHref>
                 <IconButton>
                   <Image
-                    src="/icon.png"
+                    src="/favicon.ico"
                     alt="greg murray logo"
                     height="40"
                     width="40"
