@@ -7,7 +7,6 @@ import { ContactProvider } from '../components/ContactProvider';
 import { DefaultSeo } from 'next-seo';
 import { Fragment } from 'react';
 import { GoogleAnalytics } from 'nextjs-google-analytics';
-import Head from 'next/head';
 import { getTheme } from '../config/theme';
 
 export default function App({ Component, pageProps }: AppProps) {
